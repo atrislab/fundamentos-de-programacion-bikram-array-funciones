@@ -15,14 +15,33 @@ function potenciacion(a, b) {
     let result = a**b;
     return result;
 }
+
+/*
+7.- Crea la función separarPalabras que acepte como argumento un string 
+y devuelva un array de palabras 'hola mundo' => [hola, mundo]
+*/
+
 function separarPalabras(string){
     let words= string.split(" "); 
-    return words; 
+    return words;
+
 }
+
+/*
+8.- Crea la función repetirString que acepte como argumento un string y un número 
+y devuelva un string que sea el resultado de concatenar el primer string el número dado de veces
+*/
+
 function repetirString(string, a){
     let repeated= string.repeat (a);
     return repeated;
 }
+
+/*
+9.- Crea la función esPrimo que acepte como argumento un número 
+y devuelva true si es primo y false si no lo es
+*/
+
 function esPrimo(num) {
     for (i = (num - 1); i > 1; i--){
     if (num % i == 0) {
@@ -31,9 +50,12 @@ function esPrimo(num) {
     }
     return true;
 }
+
 /*
-10.- Crear la función ordenarArray que acepta como argumento un array de números y devuelva un array ordenado de menor a mayor
+10.- Crear la función ordenarArray que acepta como argumento un array de números 
+y devuelva un array ordenado de menor a mayor
 */
+
 function ordenarArray(nums){
     const sortAsc = (a, b) => a - b;
     nums.sort(sortAsc);
@@ -42,7 +64,8 @@ function ordenarArray(nums){
 }
 
 /*
-11.- Crear la función obtenerPares que acepta como argumento un array de números y devuelva un array con los elementos pares
+11.- Crear la función obtenerPares que acepta como argumento un array de números
+ y devuelva un array con los elementos pares
 */
 
 function obtenerPares (numbers){
@@ -67,11 +90,12 @@ y devuelva un array en el que se haya aplicado la función a cada elemento del a
 ESTÁ MAL - REPASAR!!!
 */
 
-function arrayMapi(array, func){
-    for (let i=0;1<array.length; i++){
-        func(arr[i]);
-
+function arrayMapi(array, funcion) {
+    result = [];
+    for(let i = 0; i < array.length; i++) {
+        result.push(funcion(array[i]));
     }
+    return result;
 }
 
 /*
@@ -152,6 +176,7 @@ function esPar(num) {
  las funciones: suma, resta y multiplicación 
  (todas aceptan 2 números como argumento y devuelve el resultado de su operación)
 */
+
 function resta(a, b) {
     let result = a - b;
     return result;
